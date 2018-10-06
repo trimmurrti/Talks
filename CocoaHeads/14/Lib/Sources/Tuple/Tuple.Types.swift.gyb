@@ -1,0 +1,99 @@
+//
+//  Tuple.swift
+//  TicTacToe
+//
+//  Created by Oleksa 'trimm' Korin on 7/19/18.
+//  Copyright © 2018 Oleksa 'trimm' Korin. All rights reserved.
+//
+
+import Foundation
+
+%{
+import string
+
+types = [
+    ('Two', 2),
+    ('Three', 3),
+    ('Four', 4),
+    ('Five', 5),
+    ('Six', 6),
+]
+
+
+def join(array):
+    return string.join(array, ', ')
+
+
+def arity_types(arity):
+    return ['T%s' % i for i in range(arity)]
+
+
+def arity_constrained_types(arity, constrain):
+    return ['%s: %s' % (type, constrain) for type in arity_types(arity)]
+
+
+def arity_values(arity):
+    return [type.lower() for type in arity_types(arity)]
+
+
+def arity_params(arity):
+    return ['_ %s: %s' %(value, type) for value, type in zip(arity_values(arity), arity_types(arity))]
+
+
+def arity_hash_values(arity):
+    return ['value.%s.hashValue' % i for i in range(arity)]
+
+
+def string_type(arity):
+    return join(arity_types(arity))
+
+
+def string_value(arity):
+    return join(arity_values(arity))
+
+
+def string_param(arity):
+    return join(arity_params(arity))
+
+
+def string_constrained_types(arity, constrain):
+    return join(arity_constrained_types(arity, constrain))
+
+
+def string_hash_values(arity):
+    return join(arity_hash_values(arity))
+}%
+
+% for type, arity in types:
+extension Tuple {
+
+    public struct ${type}<${string_type(arity)}> {
+
+        public typealias ${type} = Tuple.${type}<${string_type(arity)}>
+        public typealias Value = (${string_type(arity)})
+
+        public let value: Value
+
+        public init(${string_param(arity)}) {
+            self.value = (${string_value(arity)})
+        }
+    }
+}
+
+extension Tuple.${type} where ${string_constrained_types(arity, 'Equatable')} {
+
+    public static func == (lhs: ${type}, rhs: ${type}) -> Bool {
+        return lhs.value == rhs.value
+    }
+}
+
+extension Tuple.${type} where ${string_constrained_types(arity, 'Hashable')} {
+
+    public var hashValue: Int {
+        let value = self.value
+
+        return [${string_hash_values(arity)}].reduce(0, ^)
+    }
+}
+
+% end

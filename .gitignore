@@ -21,6 +21,9 @@ Pods/
 .AppleDouble
 .LSOverride
 
+*.pyc
+Generated
+
 # Icon must end with two \r
 Icon
 

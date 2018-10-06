@@ -1,0 +1,23 @@
+#!/bin/bash
+
+brew install wget
+brew install rbenv
+
+touch ~/.bash_profile
+
+rbenv_eval='eval "$(rbenv init -)"'
+
+if !(grep -Fxq "$rbenv_eval" ~/.bash_profile)
+then
+    echo $rbenv_eval >> ~/.bash_profile
+fi
+
+gem install xcodeproj
+
+cd bin
+
+wget -N https://github.com/apple/swift/raw/master/utils/gyb
+wget -N https://github.com/apple/swift/raw/master/utils/gyb.py
+wget -N https://github.com/apple/swift/raw/master/utils/python_lint.py
+
+chmod +x gyb
