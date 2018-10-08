@@ -1,4 +1,5 @@
 import Foundation
+import Lib
 
 scope("Array") {
     class User: CustomStringConvertible {
@@ -38,6 +39,7 @@ protocol Emptiable {
 }
 
 extension Emptiable {
+    
     static func materialize(_ value: Self?) -> Self {
         return value ?? Self.default
     }
@@ -52,19 +54,19 @@ extension Emptiable {
 }
 
 struct EmptyTransformer<T: Emptiable> {
-    
+
     let value: T
     
     init(_ value: T) {
         self.value = value
     }
     
-    func map<R>(_ ƒ: (T) -> R) -> EmptyTransformer<R> {
-        return self.flatMap(ƒ)
+    func map<R: Emptiable>(_ transform: (T) -> R) -> EmptyTransformer<R> {
+        return self.flatMap { transform($0) }
     }
     
-    func flatMap<R>(_ ƒ: (T) -> R?) -> EmptyTransformer<R> {
-        return .init(.materialize(ƒ(self.value)))
+    func flatMap<R: Emptiable>(_ transform: (T) -> R?) -> EmptyTransformer<R> {
+        return R.materialize • EmptyTransformer<R>.init § self.value.optional.flatMap(transform)
     }
 }
 
@@ -95,13 +97,9 @@ scope("Transformer") {
         var friends = [User]()
         
         var description: String {
-            var result = "User \(self.name ?? "")"
-            let f = self.friends
-                .transformer
-                .map { ", friends \($0)" }
-                .value
-            
-            return result
+            return "User"
+                + self.name.transformer.map({ " \($0)" }).value
+                + self.friends.transformer.map({ ", friends \($0)" }).value
         }
         
         init(name: String) {
@@ -126,7 +124,7 @@ enum F {
 
 typealias Transformer<Value, Result> = (Value) -> Result
 
-struct User {
+struct User: Hashable {
     
     enum Christianity {
         case orthodox
@@ -176,7 +174,7 @@ struct User {
             -> R?
         {
             switch self {
-            case let .christian(type): return nil
+            case .christian: return nil
             case let .muslim(type):
                 return type.transform(sunna: sunna, shia: shia)
             case .judaism: return nil
@@ -207,11 +205,11 @@ struct User {
         case sexual(Users)
         
         var description: String {
-            return self.transform(asexual: .init, sexual: .init(describing:))
+            return self.transform(asexual: String.init, sexual: String.init(describing:))
         }
         
         var partners: Users {
-            return self.transform(asexual: .init, sexual: F.id)
+            return self.transform(asexual: Set.init, sexual: F.id)
         }
         
         func transform<R>(
@@ -231,7 +229,16 @@ struct User {
     let belief: Belief
     let programmingLanguages: Set<Programming>
     let sex: Camel
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+        return true
+    }
+    
+    var hashValue: Int {
+        return 0
+    }
 }
 
+
 let spouse = User.Spouse.asexual
-print()
+print(spouse)

@@ -80,14 +80,14 @@ extension Tuple {
     }
 }
 
-extension Tuple.${type} where ${string_constrained_types(arity, 'Equatable')} {
+extension Tuple.${type}: Equatable where ${string_constrained_types(arity, 'Equatable')} {
 
     public static func == (lhs: ${type}, rhs: ${type}) -> Bool {
         return lhs.value == rhs.value
     }
 }
 
-extension Tuple.${type} where ${string_constrained_types(arity, 'Hashable')} {
+extension Tuple.${type}: Hashable where ${string_constrained_types(arity, 'Hashable')} {
 
     public var hashValue: Int {
         let value = self.value

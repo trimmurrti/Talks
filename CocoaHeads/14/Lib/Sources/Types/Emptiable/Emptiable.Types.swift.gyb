@@ -16,7 +16,7 @@ types = [
 ]
 }%
 
-% for type, default_value in types
+% for type, default_value in types:
 extension ${type}: Emptiable {
 
     static var `default`: ${type} {

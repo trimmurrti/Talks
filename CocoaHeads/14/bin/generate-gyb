@@ -2,9 +2,11 @@
 
 find . -name '*.gyb' |
     while read file; do
-        target="Generated/${file}"
-        target=""${target%.gyb}""
+        target="Generated/${file#*/}"
+        target="${target%.gyb}"
         echo "Generating $file into $target"
+
+        mkdir -p $(dirname $target)
         ./bin/gyb --line-directive '' -o "$target" "$file";
     done
 

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14DBC085A9DA386C7269D9EE /* Tuple.Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B02F45CECB2819C0D95BF7 /* Tuple.Types.swift */; };
+		14DBC085A9DA386C7269D9EE /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		1ED5120408D140FEBB2129A8 /* Tuple.Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650A98C4B8A10F48B6DB5C6 /* Tuple.Types.swift */; };
+		42804D62E86B93D4D95AE9DD /* Emptiable.Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6020725DADAA4D337E6DB0 /* Emptiable.Types.swift */; };
 		D77868A42168E7040028B792 /* Emptiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77868A32168E7040028B792 /* Emptiable.swift */; };
 		D77868A72168EAA40028B792 /* Emptiable.Types.swift.gyb in Resources */ = {isa = PBXBuildFile; fileRef = D77868A52168E75D0028B792 /* Emptiable.Types.swift.gyb */; };
 		D7B9ECB62168636B00A32CE5 /* Lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B9ECAD2168636A00A32CE5 /* Lib.framework */; };
@@ -80,10 +82,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93B02F45CECB2819C0D95BF7 /* Tuple.Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tuple.Types.swift; path = Generated/Lib/Sources/Tuple/Tuple.Types.swift; sourceTree = "<group>"; };
+		4650A98C4B8A10F48B6DB5C6 /* Tuple.Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tuple.Types.swift; path = Generated/Lib/Sources/Tuple/Tuple.Types.swift; sourceTree = "<group>"; };
+		5C6020725DADAA4D337E6DB0 /* Emptiable.Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Emptiable.Types.swift; path = Generated/Lib/Sources/Types/Emptiable/Emptiable.Types.swift; sourceTree = "<group>"; };
 		D77868A32168E7040028B792 /* Emptiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emptiable.swift; sourceTree = "<group>"; };
 		D77868A52168E75D0028B792 /* Emptiable.Types.swift.gyb */ = {isa = PBXFileReference; lastKnownFileType = text; path = Emptiable.Types.swift.gyb; sourceTree = "<group>"; };
-		D7B9ECA72168632E00A32CE5 /* Talk.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Talk.playground; sourceTree = "<group>"; };
 		D7B9ECAD2168636A00A32CE5 /* Lib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B9ECAF2168636B00A32CE5 /* Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
 		D7B9ECB02168636B00A32CE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		D7B9ED57216865C300A32CE5 /* HashableWeak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableWeak.swift; sourceTree = "<group>"; };
 		D7B9ED58216865C300A32CE5 /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		D7B9ED77216865E500A32CE5 /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
+		D7E55054216BBA6E009B2DFB /* Talk.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Talk.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,46 +145,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		221D8AA5801478714659C967 /* Lib */ = {
+		03ACDC87593FFC684CE39EFE /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				D552C8845BBBA3B98A4D48C3 /* Sources */,
-				7C2F1FDABEB3D2C049EB921E /* Tuple */,
+				732754958C913019B9E811D4 /* Emptiable */,
 			);
-			name = Lib;
+			name = Types;
 			sourceTree = "<group>";
 		};
-		7C2F1FDABEB3D2C049EB921E /* Tuple */ = {
+		33F1B288BAB491E3AC032015 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Tuple;
-			sourceTree = "<group>";
-		};
-		82F34ED723E657EBA03EBC02 /* Tuple */ = {
-			isa = PBXGroup;
-			children = (
-				93B02F45CECB2819C0D95BF7 /* Tuple.Types.swift */,
-			);
-			name = Tuple;
-			sourceTree = "<group>";
-		};
-		D552C8845BBBA3B98A4D48C3 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				82F34ED723E657EBA03EBC02 /* Tuple */,
+				03ACDC87593FFC684CE39EFE /* Types */,
+				DB7860A3569399529EB2AC58 /* Tuple */,
 			);
 			name = Sources;
+			sourceTree = "<group>";
+		};
+		732754958C913019B9E811D4 /* Emptiable */ = {
+			isa = PBXGroup;
+			children = (
+				5C6020725DADAA4D337E6DB0 /* Emptiable.Types.swift */,
+			);
+			name = Emptiable;
 			sourceTree = "<group>";
 		};
 		D737F1BE2100D76F00604E32 = {
 			isa = PBXGroup;
 			children = (
-				D7B9ECA72168632E00A32CE5 /* Talk.playground */,
+				D7E55054216BBA6E009B2DFB /* Talk.playground */,
 				D7B9ECAE2168636A00A32CE5 /* Lib */,
 				D7B9ECBB2168636B00A32CE5 /* LibTests */,
 				D737F1C82100D76F00604E32 /* Products */,
-				D969A537C2692F2B872FBE84 /* Generated */,
+				E44F82D2149FE2003ECBB417 /* Generated */,
 			);
 			sourceTree = "<group>";
 		};
@@ -381,12 +377,28 @@
 			path = Weak;
 			sourceTree = "<group>";
 		};
-		D969A537C2692F2B872FBE84 /* Generated */ = {
+		DB7860A3569399529EB2AC58 /* Tuple */ = {
 			isa = PBXGroup;
 			children = (
-				221D8AA5801478714659C967 /* Lib */,
+				4650A98C4B8A10F48B6DB5C6 /* Tuple.Types.swift */,
+			);
+			name = Tuple;
+			sourceTree = "<group>";
+		};
+		E44F82D2149FE2003ECBB417 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				F18352195B9A64497EEAA2E9 /* Lib */,
 			);
 			name = Generated;
+			sourceTree = "<group>";
+		};
+		F18352195B9A64497EEAA2E9 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				33F1B288BAB491E3AC032015 /* Sources */,
+			);
+			name = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +461,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Oleksa 'trimm' Korin";
 				TargetAttributes = {
 					D7B9ECAC2168636A00A32CE5 = {
@@ -553,7 +565,9 @@
 				D7B9ED60216865C300A32CE5 /* Function.swift in Sources */,
 				D77868A42168E7040028B792 /* Emptiable.swift in Sources */,
 				D7B9ED73216865C300A32CE5 /* ViewDependencies.swift in Sources */,
-				14DBC085A9DA386C7269D9EE /* Tuple.Types.swift in Sources */,
+				14DBC085A9DA386C7269D9EE /* BuildFile in Sources */,
+				42804D62E86B93D4D95AE9DD /* Emptiable.Types.swift in Sources */,
+				1ED5120408D140FEBB2129A8 /* Tuple.Types.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +604,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -597,6 +612,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -647,6 +663,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -654,6 +671,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -13,6 +13,6 @@ public extension Array {
     public func compact<Result>() -> [Result]
         where Element == Result?
     {
-        return self.flatMap(identity)
+        return self.compactMap(identity)
     }
 }

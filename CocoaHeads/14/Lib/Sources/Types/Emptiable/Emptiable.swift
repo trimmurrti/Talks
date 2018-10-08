@@ -20,6 +20,7 @@ protocol Emptiable {
 }
 
 extension Emptiable {
+    
     static func materialize(_ value: Self?) -> Self {
         return value ?? Self.default
     }
@@ -41,11 +42,11 @@ struct EmptyTransformer<T: Emptiable> {
         self.value = value
     }
     
-    func map<R>(_ ƒ: (T) -> R) -> EmptyTransformer<R> {
-        return self.flatMap(ƒ)
+    func map<R: Emptiable>(_ transform: (T) -> R) -> EmptyTransformer<R> {
+        return self.flatMap { transform($0) }
     }
     
-    func flatMap<R>(_ ƒ: (T) -> R?) -> EmptyTransformer<R> {
-        return .init(.materialize(ƒ(self.value)))
+    func flatMap<R: Emptiable>(_ transform: (T) -> R?) -> EmptyTransformer<R> {
+        return R.materialize • EmptyTransformer<R>.init § self.value.optional.flatMap(transform)
     }
 }

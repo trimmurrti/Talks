@@ -22,7 +22,7 @@ public class UnfairLock: Lockable {
         let lock = self.unfairLock
         
         lock.deinitialize(count: 1)
-        lock.deallocate(capacity: 1)
+        lock.deallocate()
     }
     
     public init() {
