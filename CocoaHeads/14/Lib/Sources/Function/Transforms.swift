@@ -16,6 +16,8 @@ public func identity<Value>(_ value: Value) -> Value {
     return value
 }
 
+public func void<Value>(_ value: Value) { }
+
 public func typeString<T>(_ type: T.Type) -> String {
     return String(describing: type)
 }
@@ -23,8 +25,6 @@ public func typeString<T>(_ type: T.Type) -> String {
 public func typeString<T>(_ value: T) -> String {
     return typeString(type(of: value))
 }
-
-public func void<Value>(_ value: Value) { }
 
 public func • <A, B, C>(
     lhs: @escaping (A) -> B,

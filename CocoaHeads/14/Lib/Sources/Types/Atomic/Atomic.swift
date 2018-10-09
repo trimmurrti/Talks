@@ -60,11 +60,7 @@ class Atomic<Wrapped> {
     // MARK: -
     // MARK: Public
     
-    func modify<Result>(
-        _ action: (inout Value) -> Result
-        )
-        -> Result
-    {
+    func modify<Result>(_ action: (inout Value) -> Result) -> Result {
         return self.lock.do {
             let oldValue = self.mutableValue
             
@@ -76,11 +72,7 @@ class Atomic<Wrapped> {
         }
     }
     
-    func transform<Result>(
-        _ action: (Value) -> Result
-        )
-        -> Result
-    {
+    func transform<Result>(_ action: (Value) -> Result) -> Result {
         return self.lock.do {
             action(self.mutableValue)
         }

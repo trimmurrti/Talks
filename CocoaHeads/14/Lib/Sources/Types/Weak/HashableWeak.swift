@@ -8,6 +8,7 @@
 
 import Foundation
 
+// WARNING: NOPE!!!
 public struct HashableWeak<Wrapped: AnyObject & Hashable> {
     
     // MARK: -

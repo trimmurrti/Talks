@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14DBC085A9DA386C7269D9EE /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		14DBC085A9DA386C7269D9EE /* (null) in Sources */ = {isa = PBXBuildFile; };
 		1ED5120408D140FEBB2129A8 /* Tuple.Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650A98C4B8A10F48B6DB5C6 /* Tuple.Types.swift */; };
 		42804D62E86B93D4D95AE9DD /* Emptiable.Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6020725DADAA4D337E6DB0 /* Emptiable.Types.swift */; };
 		D77868A42168E7040028B792 /* Emptiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77868A32168E7040028B792 /* Emptiable.swift */; };
@@ -32,17 +32,9 @@
 		D7B9ED67216865C300A32CE5 /* Tuple+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED42216865C300A32CE5 /* Tuple+Operations.swift */; };
 		D7B9ED68216865C300A32CE5 /* Tuple.Types.swift.gyb in Resources */ = {isa = PBXBuildFile; fileRef = D7B9ED43216865C300A32CE5 /* Tuple.Types.swift.gyb */; };
 		D7B9ED69216865C300A32CE5 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED46216865C300A32CE5 /* Atomic.swift */; };
-		D7B9ED6A216865C300A32CE5 /* FunctionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED47216865C300A32CE5 /* FunctionTypes.swift */; };
 		D7B9ED6B216865C300A32CE5 /* UnfairLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED49216865C300A32CE5 /* UnfairLock.swift */; };
-		D7B9ED6C216865C300A32CE5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED4B216865C300A32CE5 /* Model.swift */; };
-		D7B9ED6D216865C300A32CE5 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED4C216865C300A32CE5 /* Observer.swift */; };
 		D7B9ED6E216865C300A32CE5 /* HashableIdentityAnyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED4E216865C300A32CE5 /* HashableIdentityAnyObject.swift */; };
 		D7B9ED6F216865C300A32CE5 /* HashableTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED4F216865C300A32CE5 /* HashableTrait.swift */; };
-		D7B9ED70216865C300A32CE5 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED51216865C300A32CE5 /* View.swift */; };
-		D7B9ED71216865C300A32CE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED52216865C300A32CE5 /* ViewController.swift */; };
-		D7B9ED72216865C300A32CE5 /* ViewControllerDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED53216865C300A32CE5 /* ViewControllerDependencies.swift */; };
-		D7B9ED73216865C300A32CE5 /* ViewDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED54216865C300A32CE5 /* ViewDependencies.swift */; };
-		D7B9ED74216865C300A32CE5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED55216865C300A32CE5 /* ViewModel.swift */; };
 		D7B9ED75216865C300A32CE5 /* HashableWeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED57216865C300A32CE5 /* HashableWeak.swift */; };
 		D7B9ED76216865C300A32CE5 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED58216865C300A32CE5 /* Weak.swift */; };
 		D7B9ED78216865E500A32CE5 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9ED77216865E500A32CE5 /* Tuple.swift */; };
@@ -109,17 +101,9 @@
 		D7B9ED42216865C300A32CE5 /* Tuple+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tuple+Operations.swift"; sourceTree = "<group>"; };
 		D7B9ED43216865C300A32CE5 /* Tuple.Types.swift.gyb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tuple.Types.swift.gyb; sourceTree = "<group>"; };
 		D7B9ED46216865C300A32CE5 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
-		D7B9ED47216865C300A32CE5 /* FunctionTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionTypes.swift; sourceTree = "<group>"; };
 		D7B9ED49216865C300A32CE5 /* UnfairLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnfairLock.swift; sourceTree = "<group>"; };
-		D7B9ED4B216865C300A32CE5 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		D7B9ED4C216865C300A32CE5 /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		D7B9ED4E216865C300A32CE5 /* HashableIdentityAnyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableIdentityAnyObject.swift; sourceTree = "<group>"; };
 		D7B9ED4F216865C300A32CE5 /* HashableTrait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableTrait.swift; sourceTree = "<group>"; };
-		D7B9ED51216865C300A32CE5 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		D7B9ED52216865C300A32CE5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D7B9ED53216865C300A32CE5 /* ViewControllerDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerDependencies.swift; sourceTree = "<group>"; };
-		D7B9ED54216865C300A32CE5 /* ViewDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDependencies.swift; sourceTree = "<group>"; };
-		D7B9ED55216865C300A32CE5 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D7B9ED57216865C300A32CE5 /* HashableWeak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableWeak.swift; sourceTree = "<group>"; };
 		D7B9ED58216865C300A32CE5 /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		D7B9ED77216865E500A32CE5 /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
@@ -312,11 +296,8 @@
 			children = (
 				D77868A22168E6F10028B792 /* Emptiable */,
 				D7B9ED45216865C300A32CE5 /* Atomic */,
-				D7B9ED47216865C300A32CE5 /* FunctionTypes.swift */,
 				D7B9ED48216865C300A32CE5 /* Lock */,
-				D7B9ED4A216865C300A32CE5 /* Model */,
 				D7B9ED4D216865C300A32CE5 /* Transformers */,
-				D7B9ED50216865C300A32CE5 /* UI */,
 				D7B9ED56216865C300A32CE5 /* Weak */,
 			);
 			path = Types;
@@ -338,15 +319,6 @@
 			path = Lock;
 			sourceTree = "<group>";
 		};
-		D7B9ED4A216865C300A32CE5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D7B9ED4B216865C300A32CE5 /* Model.swift */,
-				D7B9ED4C216865C300A32CE5 /* Observer.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		D7B9ED4D216865C300A32CE5 /* Transformers */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,18 +326,6 @@
 				D7B9ED4F216865C300A32CE5 /* HashableTrait.swift */,
 			);
 			path = Transformers;
-			sourceTree = "<group>";
-		};
-		D7B9ED50216865C300A32CE5 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				D7B9ED51216865C300A32CE5 /* View.swift */,
-				D7B9ED52216865C300A32CE5 /* ViewController.swift */,
-				D7B9ED53216865C300A32CE5 /* ViewControllerDependencies.swift */,
-				D7B9ED54216865C300A32CE5 /* ViewDependencies.swift */,
-				D7B9ED55216865C300A32CE5 /* ViewModel.swift */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		D7B9ED56216865C300A32CE5 /* Weak */ = {
@@ -535,19 +495,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B9ED5E216865C300A32CE5 /* Sequence+Extensions.swift in Sources */,
-				D7B9ED6D216865C300A32CE5 /* Observer.swift in Sources */,
 				D7B9ED64216865C300A32CE5 /* RootViewRepresentable.swift in Sources */,
 				D7B9ED5F216865C300A32CE5 /* Application.swift in Sources */,
 				D7B9ED78216865E500A32CE5 /* Tuple.swift in Sources */,
-				D7B9ED72216865C300A32CE5 /* ViewControllerDependencies.swift in Sources */,
 				D7B9ED67216865C300A32CE5 /* Tuple+Operations.swift in Sources */,
 				D7B9ED69216865C300A32CE5 /* Atomic.swift in Sources */,
-				D7B9ED71216865C300A32CE5 /* ViewController.swift in Sources */,
 				D7B9ED61216865C300A32CE5 /* Transforms.swift in Sources */,
 				D7B9ED5C216865C300A32CE5 /* NSLocking+Extensions.swift in Sources */,
-				D7B9ED74216865C300A32CE5 /* ViewModel.swift in Sources */,
 				D7B9ED62216865C300A32CE5 /* Weakify.swift in Sources */,
-				D7B9ED70216865C300A32CE5 /* View.swift in Sources */,
 				D7B9ED59216865C300A32CE5 /* Array+Apply.swift in Sources */,
 				D7B9ED76216865C300A32CE5 /* Weak.swift in Sources */,
 				D7B9ED6B216865C300A32CE5 /* UnfairLock.swift in Sources */,
@@ -556,16 +511,13 @@
 				D7B9ED75216865C300A32CE5 /* HashableWeak.swift in Sources */,
 				D7B9ED65216865C300A32CE5 /* Operators.swift in Sources */,
 				D7B9ED6F216865C300A32CE5 /* HashableTrait.swift in Sources */,
-				D7B9ED6A216865C300A32CE5 /* FunctionTypes.swift in Sources */,
 				D7B9ED63216865C300A32CE5 /* Lockable.swift in Sources */,
 				D7B9ED6E216865C300A32CE5 /* HashableIdentityAnyObject.swift in Sources */,
 				D7B9ED66216865C300A32CE5 /* PrecedenceGroups.swift in Sources */,
-				D7B9ED6C216865C300A32CE5 /* Model.swift in Sources */,
 				D7B9ED5D216865C300A32CE5 /* Optional+Apply.swift in Sources */,
 				D7B9ED60216865C300A32CE5 /* Function.swift in Sources */,
 				D77868A42168E7040028B792 /* Emptiable.swift in Sources */,
-				D7B9ED73216865C300A32CE5 /* ViewDependencies.swift in Sources */,
-				14DBC085A9DA386C7269D9EE /* BuildFile in Sources */,
+				14DBC085A9DA386C7269D9EE /* (null) in Sources */,
 				42804D62E86B93D4D95AE9DD /* Emptiable.Types.swift in Sources */,
 				1ED5120408D140FEBB2129A8 /* Tuple.Types.swift in Sources */,
 			);

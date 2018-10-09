@@ -9,13 +9,13 @@
 import Foundation
 
 public extension Array {
-//    
-//    public func apply<Value, Result>(_ value: Value) -> [Result]
-//        where Element == (Value) -> Result
-//    {
-//        return [value].apply(self)
-//    }
-//    
+    
+    public func apply<Value, Result>(_ value: Value) -> [Result]
+        where Element == (Value) -> Result
+    {
+        return [value].apply(self)
+    }
+    
     public func apply<Value, Result>(_ values: [Value]) -> [Result]
         where Element == (Value) -> Result
     {

@@ -30,6 +30,10 @@ public struct Weak<Wrapped: AnyObject> {
 extension Weak: Equatable {
     
     public static func == (lhs: Weak, rhs: Weak) -> Bool {
+        if lhs.isEmpty && rhs.isEmpty {
+            return true
+        }
+        
         return Tuple.lift(lhs.wrapped, rhs.wrapped).map(===) ?? false
     }
 }
