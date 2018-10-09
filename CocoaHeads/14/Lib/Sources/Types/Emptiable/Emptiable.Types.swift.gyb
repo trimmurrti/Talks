@@ -1,0 +1,27 @@
+//
+//  Emptiable.Types.swift.gyb
+//  Lib
+//
+//  Created by Oleksa 'trimm' Korin on 10/6/18.
+//  Copyright © 2018 Oleksa 'trimm' Korin. All rights reserved.
+//
+
+import Foundation
+
+%{
+types = [
+    ('String', '""'),
+    ('Array', '[]'),
+    ('Set', 'Set()')
+]
+}%
+
+% for type, default_value in types:
+extension ${type}: Emptiable {
+
+    static var `default`: ${type} {
+        return ${default_value}
+    }
+}
+
+% end
